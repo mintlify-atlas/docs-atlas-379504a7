@@ -1,0 +1,470 @@
+---
+title: 'Customization'
+description: 'Personalize Gantt Maker to match your brand and workflow'
+icon: 'palette'
+---
+
+## Overview
+
+Gantt Maker offers extensive customization options to ensure your project visualizations align with your brand identity and workflow preferences. From color palettes to configuration templates, every aspect can be tailored to your needs.
+
+<Note>
+  All customization settings are automatically saved using LocalStorage, meaning your preferences persist across sessions without any manual save action required.
+</Note>
+
+## Color Palette Customization
+
+Colors are a critical part of visual project management. Gantt Maker allows you to create custom color schemes that maintain brand consistency across all your projects.
+
+### Team Member Colors
+
+Each team member can be assigned a unique color for instant visual identification:
+
+1. Navigate to the **Team Members** section
+2. Click on a team member's color swatch
+3. Choose from the color picker or enter a hex code
+4. The timeline updates immediately with the new color
+
+```javascript
+// Example team color configuration
+{
+  "team": [
+    {
+      "name": "Sarah Chen",
+      "role": "Lead Developer",
+      "color": "#3B82F6"
+    },
+    {
+      "name": "Marcus Rodriguez",
+      "role": "Designer",
+      "color": "#8B5CF6"
+    },
+    {
+      "name": "Aisha Patel",
+      "role": "Project Manager",
+      "color": "#10B981"
+    }
+  ]
+}
+```
+
+<Tip>
+  Use colors with sufficient contrast from your background to ensure accessibility. Gantt Maker includes built-in contrast checking to help you maintain WCAG AA standards.
+</Tip>
+
+### Task Status Colors
+
+Customize colors for different task states:
+
+- **Not Started**: Default/neutral color
+- **In Progress (WIP)**: Active work indicator
+- **Completed**: Finished tasks
+- **Overdue**: Past deadline warning
+- **On Hold**: Temporarily paused work
+
+### Brand Color Palettes
+
+Create complete brand-aligned color schemes:
+
+1. Navigate to **Configuration** > **Color Palettes**
+2. Click **Create New Palette**
+3. Define your brand colors:
+   - Primary brand color
+   - Secondary/accent colors
+   - Success/warning/error states
+   - Background and text colors
+4. Name and save your palette
+
+```json
+{
+  "paletteName": "Corporate Blue",
+  "colors": {
+    "primary": "#0066CC",
+    "secondary": "#4A90E2",
+    "success": "#28A745",
+    "warning": "#FFC107",
+    "error": "#DC3545",
+    "background": "#FFFFFF",
+    "text": "#333333"
+  }
+}
+```
+
+### Theme Modes
+
+Gantt Maker supports both light and dark themes:
+
+- **Light Mode**: Traditional bright interface for daytime use
+- **Dark Mode**: Reduced eye strain for extended sessions
+- **Auto**: Follows system preference
+
+<Note>
+  Your color palette automatically adapts between light and dark modes, with intelligent contrast adjustments to maintain readability.
+</Note>
+
+## Saving and Loading Configurations
+
+### Auto-Save with LocalStorage
+
+Gantt Maker automatically saves your work as you go:
+
+- **Real-time saving**: Changes are saved immediately
+- **No manual action**: Never worry about losing work
+- **Browser-based**: Data stays on your device for privacy
+- **Multiple projects**: Each project maintains its own configuration
+
+### What Gets Saved Automatically
+
+- Team member assignments and colors
+- Task definitions and progress states
+- Timeline configuration (date/hour mode)
+- Date exclusions and time blocks
+- Color palettes and theme preferences
+- View settings and zoom levels
+
+<Tip>
+  While auto-save handles your work-in-progress, regularly export important projects for backup purposes and to share with team members.
+</Tip>
+
+### Manual Save Operations
+
+For explicit control, use manual save features:
+
+1. Click **File** > **Save Project**
+2. Choose a descriptive name
+3. Select save location (LocalStorage or file system)
+4. Add optional project notes
+
+### Loading Saved Projects
+
+1. Click **File** > **Open Project**
+2. Browse your saved projects
+3. Select the project to load
+4. Timeline and all settings restore instantly
+
+## Export/Import Settings
+
+### Exporting Configurations
+
+Share your configurations across projects or team members:
+
+#### Export Options
+
+**Complete Project Export**
+```json
+{
+  "projectName": "Q1 Product Launch",
+  "exportDate": "2025-03-10",
+  "version": "1.0",
+  "settings": { ... },
+  "team": [ ... ],
+  "tasks": [ ... ],
+  "timeline": { ... }
+}
+```
+
+**Settings-Only Export**
+```json
+{
+  "configType": "settings",
+  "colorPalette": { ... },
+  "dateExclusions": [ ... ],
+  "timeBlocks": [ ... ],
+  "viewPreferences": { ... }
+}
+```
+
+**Team Template Export**
+```json
+{
+  "configType": "team",
+  "team": [ ... ],
+  "roles": [ ... ]
+}
+```
+
+### Importing Configurations
+
+1. Navigate to **File** > **Import**
+2. Select import type:
+   - Complete project
+   - Settings only
+   - Team configuration
+   - Color palette
+3. Choose your file (JSON format)
+4. Review import preview
+5. Confirm import
+
+<Note>
+  When importing, you can choose to merge with existing settings or completely replace them. Merging is useful for adding team members without losing existing work.
+</Note>
+
+### Export Formats
+
+**JSON (Native Format)**
+- Complete fidelity
+- Re-importable
+- Human-readable
+- Version controlled
+
+**CSV (Spreadsheet)**
+- Task lists
+- Team assignments
+- Timeline data
+- Compatible with Excel/Google Sheets
+
+**Image (Visual)**
+- PNG for presentations
+- SVG for scaling
+- PDF for documents
+
+## Template Creation for Repeated Projects
+
+Standardize your best practices with reusable templates:
+
+### Creating Templates
+
+1. Configure a project with:
+   - Standard team structure
+   - Common date exclusions
+   - Typical task breakdown
+   - Brand colors and settings
+2. Navigate to **File** > **Save as Template**
+3. Name your template (e.g., "Sprint Template", "Client Project")
+4. Add a description of when to use it
+5. Save to your template library
+
+### Template Types
+
+**Sprint Template**
+```javascript
+// 2-week sprint with standard ceremonies
+{
+  "name": "Standard Sprint Template",
+  "duration": "2 weeks",
+  "tasks": [
+    "Sprint Planning",
+    "Daily Stand-ups",
+    "Development Work",
+    "Sprint Review",
+    "Sprint Retrospective"
+  ],
+  "timeBlocks": [
+    // Daily stand-up times
+    // Focus hours
+  ]
+}
+```
+
+**Client Project Template**
+```javascript
+// Standard client engagement structure
+{
+  "name": "Client Project Template",
+  "phases": [
+    "Discovery",
+    "Design",
+    "Development",
+    "Testing",
+    "Deployment",
+    "Handoff"
+  ],
+  "team": [
+    "Project Manager",
+    "Designer",
+    "Lead Developer",
+    "QA Engineer"
+  ]
+}
+```
+
+**Marketing Campaign Template**
+```javascript
+{
+  "name": "Campaign Launch Template",
+  "milestones": [
+    "Campaign Kickoff",
+    "Content Creation",
+    "Review & Approval",
+    "Launch",
+    "Post-Launch Analysis"
+  ]
+}
+```
+
+<Tip>
+  Create templates for recurring project types to save hours of setup time. A well-crafted template can reduce project initialization from 2 hours to 2 minutes.
+</Tip>
+
+### Using Templates
+
+1. Click **File** > **New from Template**
+2. Browse your template library
+3. Select the appropriate template
+4. Customize specific details (dates, team members)
+5. Start working immediately
+
+### Template Management
+
+- **Edit**: Update templates based on lessons learned
+- **Duplicate**: Create variations of existing templates
+- **Share**: Export templates for team standardization
+- **Archive**: Keep old templates for reference without cluttering the active list
+
+## Advanced Customization
+
+### View Preferences
+
+**Timeline Density**
+- Compact: More information, less spacing
+- Comfortable: Balanced view
+- Spacious: Maximum readability
+
+**Column Visibility**
+Toggle display of:
+- Task names
+- Assignees
+- Due dates
+- Progress indicators
+- Priority flags
+
+**Sort and Filter**
+- Sort by: assignee, date, priority, status
+- Filter by: team member, date range, completion status
+- Save custom views
+
+### Workspace Layout
+
+<Note>
+  Customize panel positions and sizes to create your ideal workspace. Gantt Maker remembers your layout preferences for each project.
+</Note>
+
+**Panel Configuration**
+- Collapsible sidebars
+- Resizable panels
+- Floating configuration windows
+- Full-screen timeline mode
+
+### Keyboard Shortcuts Customization
+
+1. Navigate to **Settings** > **Keyboard Shortcuts**
+2. Click on any action to rebind it
+3. Press your preferred key combination
+4. Conflicts are highlighted automatically
+5. Save your custom shortcuts
+
+## Best Practices
+
+### Establishing Team Standards
+
+1. **Create a base template** with:
+   - Company color palette
+   - Standard team roles
+   - Common date exclusions (company holidays)
+   - Preferred time blocks
+
+2. **Share across the organization**:
+   - Export the template
+   - Distribute to all project managers
+   - Maintain in a central repository
+
+3. **Version control your templates**:
+   - Track changes over time
+   - Document why changes were made
+   - Maintain backward compatibility
+
+### Maintenance and Updates
+
+- Review templates quarterly
+- Update color palettes when brand guidelines change
+- Refresh date exclusions annually (new holiday schedules)
+- Gather feedback from users on template effectiveness
+
+<Tip>
+  Designate a "Gantt Maker Admin" in your organization to maintain templates and standardize best practices across teams.
+</Tip>
+
+## Backup and Recovery
+
+### LocalStorage Limitations
+
+While auto-save is convenient, be aware:
+- Browser cache clearing removes saved data
+- Browser updates may reset storage
+- Different browsers have separate storage
+
+### Backup Strategy
+
+1. **Regular exports**: Weekly or after major changes
+2. **Cloud storage**: Save exports to Dropbox, Drive, etc.
+3. **Version naming**: Include dates in file names
+4. **Multiple locations**: Keep backups in more than one place
+
+```bash
+# Example backup file naming convention
+Project_Name_YYYY-MM-DD_v1.json
+Q1_Launch_2025-03-10_v3.json
+```
+
+### Recovery Process
+
+If you need to recover data:
+
+1. Navigate to **File** > **Import**
+2. Select your most recent backup file
+3. Review the import preview
+4. Confirm restoration
+5. Verify all data loaded correctly
+
+## Collaboration Features
+
+### Sharing Configurations
+
+**Via Export Files**
+- Generate export file
+- Share via email, Slack, or shared drive
+- Recipients import to their instance
+
+**Via URL (Future Feature)**
+- Generate shareable link
+- Control view/edit permissions
+- Track who has access
+
+<Note>
+  Currently, Gantt Maker operates entirely on your local device with no backend. This ensures complete privacy but requires manual sharing of configurations. Cloud sync features are planned for future releases.
+</Note>
+
+## Performance Optimization
+
+For large projects with extensive customization:
+
+### Tips for Smooth Performance
+
+1. **Limit active color palettes**: Keep only what you use
+2. **Archive old templates**: Move unused templates to separate storage
+3. **Consolidate configurations**: Merge similar settings
+4. **Regular cleanup**: Remove obsolete exclusions and time blocks
+
+### Browser Considerations
+
+- **Chrome/Edge**: Excellent performance, recommended
+- **Firefox**: Good performance, full feature support
+- **Safari**: Full functionality, slightly slower rendering
+- **Mobile browsers**: Optimized responsive view, touch-friendly
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Excluding Dates" icon="calendar-xmark" href="/guide/excluding-dates">
+    Configure holidays and non-working days
+  </Card>
+  <Card title="Time Blocks" icon="clock" href="/guide/time-blocks">
+    Set up non-working hours and availability windows
+  </Card>
+</CardGroup>
+
+---
+
+<Note>
+  Remember: All settings are automatically saved to LocalStorage as you work. Export important configurations regularly for backup and sharing purposes.
+</Note>

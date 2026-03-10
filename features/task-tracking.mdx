@@ -1,0 +1,273 @@
+---
+title: Task Tracking
+description: Interactive task status management with click-to-update progress and real-time visualization
+---
+
+Gantt Maker's interactive task tracking system lets you manage task status with simple clicks, providing real-time visual feedback on project progress.
+
+## Overview
+
+Every task in your Gantt chart is interactive, allowing you to update status, edit details, and track progress without complex forms or menus.
+
+<Tip>
+  Click directly on tasks to update their status. The visual feedback is instant, keeping everyone aligned on project progress.
+</Tip>
+
+## Task Status Flow
+
+Tasks move through a clear, three-stage lifecycle:
+
+<Steps>
+  <Step title="Pending">
+    **Pending** tasks are planned but not yet started. They appear in the default state, ready for team members to begin work.
+    
+    Visual indicators:
+    - Lighter color shading
+    - No progress indicators
+    - Full task bar visible on timeline
+  </Step>
+  
+  <Step title="Work In Progress (WIP)">
+    **WIP** tasks are actively being worked on. Click a pending task once to mark it as in progress.
+    
+    Visual indicators:
+    - Distinct WIP marking or pattern
+    - Partial progress visualization
+    - Enhanced visibility in team member's color
+  </Step>
+  
+  <Step title="Completed">
+    **Completed** tasks are finished and verified. Click a WIP task again to mark it complete.
+    
+    Visual indicators:
+    - Checkmark or completion badge
+    - Muted or strikethrough styling
+    - Full progress bar filled
+  </Step>
+</Steps>
+
+<Note>
+  The status flow is designed to match agile workflows: Pending → WIP → Completed. This simple progression keeps projects moving forward without status confusion.
+</Note>
+
+## Click-to-Update Interface
+
+Update task status with simple, intuitive clicks:
+
+### Basic Status Updates
+
+<Steps>
+  <Step title="Click a pending task">
+    Click once on any pending task bar to mark it as Work In Progress (WIP).
+  </Step>
+  
+  <Step title="Click again to complete">
+    Click the same task (now in WIP state) to mark it as Completed.
+  </Step>
+  
+  <Step title="See visual changes">
+    Watch the task's appearance update instantly to reflect its new status.
+  </Step>
+</Steps>
+
+### Advanced Status Management
+
+For more control over task status:
+
+- **Right-click or long-press** for status options menu
+- **Status filters** to view only pending, WIP, or completed tasks
+- **Bulk updates** to change status for multiple related tasks
+- **Status history** to see when tasks transitioned between states
+
+<Info>
+  All status changes are saved automatically to your browser's local storage, ensuring no progress is lost even if you close the application.
+</Info>
+
+## Real-Time Progress Visualization
+
+The Gantt chart provides instant visual feedback on project progress:
+
+### Individual Task Progress
+
+- **Color intensity**: Task bars change appearance based on status
+- **Progress indicators**: Visual markers show completion state
+- **Status badges**: Icons clearly indicate pending, WIP, or completed states
+- **Timeline position**: See completed work in context of overall schedule
+
+### Team Progress Tracking
+
+Visualize progress across your entire team:
+
+<Tabs>
+  <Tab title="By Team Member">
+    **Personal progress tracking**
+    
+    Each team member's color-coded tasks show their individual progress:
+    - How many tasks are pending vs. completed
+    - Current WIP tasks requiring attention
+    - Overall contribution to project completion
+  </Tab>
+  
+  <Tab title="By Timeline">
+    **Temporal progress view**
+    
+    See progress over time:
+    - Past: Verify all scheduled tasks are completed
+    - Present: Monitor active WIP tasks
+    - Future: Preview upcoming pending tasks
+  </Tab>
+  
+  <Tab title="By Completion Percentage">
+    **Overall project status**
+    
+    Understand project health at a glance:
+    - Percentage of completed tasks
+    - Number of active WIP items
+    - Remaining pending work
+  </Tab>
+</Tabs>
+
+## Editing Task Details
+
+Modify task information directly in the Gantt chart:
+
+### Editable Task Properties
+
+<Steps>
+  <Step title="Select the task">
+    Click on a task bar to select it for editing.
+  </Step>
+  
+  <Step title="Open edit mode">
+    Double-click or use the edit button to open task details.
+  </Step>
+  
+  <Step title="Update information">
+    Modify any task property:
+    - Task name and description
+    - Start and end dates/times
+    - Assigned team member
+    - Priority or category labels
+  </Step>
+  
+  <Step title="Save changes">
+    Changes save automatically and update the visual representation immediately.
+  </Step>
+</Steps>
+
+### Quick Edit Features
+
+- **Drag to resize**: Adjust task duration by dragging edges
+- **Drag to move**: Shift task timing by dragging the entire bar
+- **Click to reassign**: Change team member assignment with a click
+- **Inline editing**: Edit task names directly in the chart view
+
+<Tip>
+  Use drag-and-drop editing to quickly adjust schedules during planning sessions. Changes are reflected instantly across all views.
+</Tip>
+
+## Real-World Applications
+
+### Agile Development Teams
+
+> "We manage sprints of 2 weeks with precision. As developers move stories from 'To Do' to 'In Progress' to 'Done', they just click the tasks in our Gantt chart. The visual feedback keeps the whole team aligned during daily stand-ups."
+
+**Workflow:**
+1. Sprint starts with all tasks in Pending state
+2. Developers claim tasks by marking them WIP (click once)
+3. Upon completion, mark as Complete (click again)
+4. Scrum master reviews completed (green) vs. pending (gray) at sprint end
+
+### Event Planning
+
+> "For our event production schedules, we track hundreds of tasks. The click-to-update interface means our coordinators can mark tasks complete from mobile devices right from the venue floor."
+
+**Workflow:**
+1. Pre-event tasks planned in date/hour mode
+2. On event day, coordinators mark tasks WIP as they begin
+3. Completed tasks marked in real-time
+4. Producer sees real-time progress dashboard
+
+### Academic Projects
+
+> "My thesis has dozens of milestones. Being able to click tasks as I complete research phases, writing blocks, and review cycles gives me instant gratification and clear progress visibility."
+
+**Workflow:**
+1. Semester mapped out with all thesis milestones
+2. Daily writing sessions marked as completed after each session
+3. Visual progress motivates continued work
+4. Advisor meetings show clear completion timeline
+
+## Integration with Other Features
+
+### Task Status + Team Colors
+
+Combine status tracking with team member colors:
+- **Pending tasks**: Show in team member's color with light shading
+- **WIP tasks**: Full team member color with progress indicator
+- **Completed tasks**: Team member color with completion badge
+
+This combination provides two dimensions of information:
+- **Who** is responsible (color)
+- **What** the current status is (pending/WIP/completed)
+
+### Task Status + Timeline Modes
+
+Status tracking works seamlessly across timeline modes:
+- **Date mode**: Track task completion over days and weeks
+- **Hour mode**: Monitor hourly task progress for intensive periods
+- Switching modes preserves all status information
+
+<Note>
+  Your task status data persists regardless of timeline view, ensuring consistent progress tracking at any planning granularity.
+</Note>
+
+## Progress Reporting
+
+Use visual task tracking for effective progress reporting:
+
+### Quick Status Reports
+
+- **Visual scan**: Color-coded status provides instant progress overview
+- **Filter views**: Show only completed, WIP, or pending tasks
+- **Export snapshots**: Save Gantt chart views for stakeholder updates
+- **Timeline comparisons**: Compare planned vs. actual completion dates
+
+### Bottleneck Identification
+
+The visual interface helps identify issues:
+- Tasks stuck in WIP state for too long
+- Team members with too many simultaneous WIP tasks
+- Pending tasks blocking downstream work
+- Completed task patterns revealing workflow inefficiencies
+
+<Info>
+  The responsive design ensures you can track and update task status from any device - desktop for planning, tablet for reviews, mobile for on-the-go updates.
+</Info>
+
+## Best Practices
+
+### Keeping Status Current
+
+- **Daily updates**: Encourage team to update task status at least once per day
+- **Stand-up reviews**: Use visual Gantt chart during daily stand-ups
+- **End-of-day ritual**: Mark completed tasks before logging off
+- **Mobile access**: Update status from mobile devices when working remotely
+
+### Effective Status Progression
+
+- **Start when you start**: Mark tasks WIP immediately when beginning work
+- **Complete when done**: Don't wait to mark tasks completed
+- **Avoid WIP buildup**: Limit simultaneous WIP tasks per team member
+- **Review pending queue**: Regularly check upcoming pending tasks
+
+### Visual Progress Management
+
+- Use completion percentage to gauge sprint/project health
+- Compare completed tasks against timeline expectations
+- Identify team members who may need support (many WIP, few completed)
+- Celebrate progress by reviewing completed task sections
+
+<Tip>
+  The most successful teams update task status in real-time during their daily stand-ups, using the Gantt chart as the visual centerpiece of team coordination.
+</Tip>

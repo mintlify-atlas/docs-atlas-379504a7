@@ -1,0 +1,273 @@
+---
+title: 'Data Privacy & Security'
+description: 'Information about data privacy and security in Gantt Maker'
+---
+
+# Data Privacy & Security
+
+Gantt Maker is built with privacy-first principles. Your data belongs to you, and you have complete control over it.
+
+## Our Privacy Commitment
+
+Gantt Maker operates under a simple privacy principle: **your data stays with you**.
+
+### Zero Data Collection
+
+<Card title="No Tracking" icon="shield-check">
+  Gantt Maker does not collect, transmit, or store any of your personal information or project data on external servers.
+</Card>
+
+**We do NOT collect**:
+- Personal information or user profiles
+- Project data or content
+- Usage analytics or telemetry
+- IP addresses or location data
+- Browser fingerprints or device information
+- Cookies for tracking purposes
+- Any form of user behavior data
+
+## Local-Only Storage
+
+### How Your Data is Stored
+
+All project data is stored exclusively in your browser's LocalStorage:
+
+- **Browser-based**: Data is stored locally on your device
+- **No cloud sync**: Nothing is sent to external servers
+- **Per-browser storage**: Each browser maintains its own data
+- **Automatic saves**: Changes are saved to LocalStorage immediately
+- **Persistent sessions**: Your data remains between browser sessions
+
+<Info>
+  LocalStorage is a web browser feature that allows applications to store data on your device. It's completely separate from any external servers or cloud services.
+</Info>
+
+### What This Means for You
+
+**Benefits**:
+- Complete data privacy and security
+- Works completely offline
+- No account registration required
+- No subscription or data sharing agreements
+- Fast performance with no network latency
+
+**Considerations**:
+- Data is specific to the browser and device where it was created
+- Clearing browser data will delete your projects
+- Data doesn't automatically sync across devices
+- Browser storage limits apply (typically 5-10MB)
+
+<Tip>
+  Regular exports ensure you have backups independent of browser storage. This is the best way to protect your project data.
+</Tip>
+
+## Data Ownership and Control
+
+### You Own Your Data
+
+With Gantt Maker, you maintain complete ownership and control:
+
+- **Full access**: All your data is always accessible to you
+- **No lock-in**: Export your projects anytime in standard JSON format
+- **Complete control**: Delete, modify, or export without restrictions
+- **No third parties**: Your data is never shared with or accessible to anyone else
+- **Portability**: Move your data freely between devices and browsers
+
+### Data Portability
+
+You can export your projects at any time:
+
+```json
+{
+  "project": "My Project",
+  "timeline": {...},
+  "tasks": [...],
+  "team": [...]
+}
+```
+
+Exported JSON files:
+- Contain all your project information
+- Can be stored anywhere you choose
+- Are importable back into Gantt Maker
+- Can be version controlled or archived
+- Are human-readable and can be edited
+
+## Security Best Practices
+
+### Protecting Your Project Data
+
+While Gantt Maker doesn't transmit your data, follow these best practices to keep your projects secure:
+
+<Steps>
+  <Step title="Regular Exports">
+    Export your projects regularly as JSON files to maintain backups independent of browser storage.
+  </Step>
+  
+  <Step title="Secure Storage">
+    Store exported project files in secure locations:
+    - Encrypted cloud storage (personal choice)
+    - Local encrypted drives
+    - Version control systems (if appropriate for your data)
+    - Secure backup solutions
+  </Step>
+  
+  <Step title="Access Control">
+    Protect access to your device:
+    - Use strong passwords or biometric locks
+    - Lock your device when away
+    - Don't leave browser sessions open on shared computers
+    - Use private/incognito mode on shared devices (but note: data won't persist)
+  </Step>
+  
+  <Step title="Browser Security">
+    Keep your browser secure:
+    - Update to the latest browser version
+    - Use reputable security extensions if needed
+    - Be cautious with browser extensions that access all websites
+    - Clear data when using public or shared computers
+  </Step>
+</Steps>
+
+### Sensitive Project Data
+
+If working with sensitive or confidential projects:
+
+<Warning>
+  While your data stays local, anyone with physical access to your device and browser can access LocalStorage data. Take appropriate precautions for sensitive information.
+</Warning>
+
+**Recommendations**:
+- Use device encryption (FileVault, BitLocker, etc.)
+- Store exported files in encrypted containers
+- Don't use shared or public computers for sensitive projects
+- Consider using a dedicated browser profile for sensitive work
+- Regularly clear LocalStorage on shared devices
+- Use descriptive but non-sensitive project names
+
+## Data Backup Strategy
+
+### Why Backups Matter
+
+Since data is stored locally, creating backups is essential:
+
+**LocalStorage limitations**:
+- Can be cleared by browser cleaning tools
+- May be deleted when uninstalling browsers
+- Storage quota limits may be reached
+- Browser crashes or corruption can cause data loss
+- Switching devices means starting fresh without exports
+
+### Recommended Backup Approach
+
+<Card title="Export Frequently" icon="download">
+  Export your projects after significant changes or at regular intervals (daily, weekly, or after major updates).
+</Card>
+
+**Create a backup routine**:
+1. **After major changes**: Export when completing significant project updates
+2. **Regular schedule**: Set a reminder to export weekly or monthly
+3. **Multiple versions**: Keep different versions for project milestones
+4. **Organized storage**: Use consistent naming conventions (e.g., `project-name-2026-03-10.json`)
+5. **Multiple locations**: Store backups in at least two different locations
+
+### Export for Collaboration
+
+To share projects with team members:
+
+1. Export your project as a JSON file
+2. Share via your preferred method:
+   - Email attachment
+   - Shared drive (Google Drive, Dropbox, OneDrive)
+   - File sharing service
+   - Version control system (Git, if appropriate)
+3. Team members import the file into their Gantt Maker
+4. Exchange updated versions as needed
+5. Use clear version naming to track changes
+
+<Info>
+  When collaborating, establish a clear process for who makes changes and how updated versions are shared to avoid conflicts.
+</Info>
+
+## Browser Storage Considerations
+
+### Understanding LocalStorage Limits
+
+Browsers impose storage limits on LocalStorage:
+
+- **Typical limit**: 5-10MB per domain
+- **Varies by browser**: Chrome, Firefox, Safari have slightly different limits
+- **Shared quota**: All data for the domain counts toward the limit
+- **No warning**: Browsers may fail silently when limit is reached
+
+### Managing Storage Space
+
+**For large projects**:
+- Split into smaller project files by phase or team
+- Archive completed projects (export and remove from LocalStorage)
+- Keep only active projects in the browser
+- Regularly clean up old or test projects
+
+### Data Persistence
+
+**Your data persists until**:
+- You explicitly clear browser data
+- Browser storage is cleared by cleaning software
+- Browser is uninstalled without exporting settings
+- Storage quota is exceeded
+- You manually delete the data
+
+<Warning>
+  Browser "clear history" functions often include LocalStorage. Be careful when using browser cleaning features.
+</Warning>
+
+## Transparency Commitment
+
+Gantt Maker maintains complete transparency about data handling:
+
+- **Open source**: You can verify how data is handled by reviewing the code
+- **No hidden features**: No analytics, tracking, or data collection code
+- **No external connections**: The application doesn't make network requests for data
+- **No accounts**: No registration, login, or user tracking systems
+- **No monetization through data**: Your data is never used for advertising or sold
+
+## Compliance and Standards
+
+### Privacy by Design
+
+Gantt Maker implements privacy by design principles:
+
+- **Data minimization**: We don't collect data we don't need (which is any data)
+- **Purpose limitation**: No data is used for purposes beyond your project management
+- **Storage limitation**: Data is only stored locally on your device
+- **Transparency**: Clear information about how data is handled
+- **User control**: You have complete control over your data
+
+### GDPR and Privacy Regulations
+
+While Gantt Maker doesn't process personal data in a regulatory sense:
+
+- **No personal data processing**: We don't process or control your data
+- **No data transfers**: Data never leaves your device
+- **No consent needed**: Since we don't collect data, no consent forms are required
+- **Right to deletion**: Simply clear browser storage or delete exported files
+- **Right to export**: Built-in export functionality provides data portability
+
+## Questions About Privacy?
+
+If you have questions about data privacy and security:
+
+- Review the application source code (available on GitHub)
+- Check browser developer tools to see what's stored in LocalStorage
+- Use browser network monitoring to verify no external data transmission
+- Examine exported JSON files to see exactly what data is stored
+
+<Card title="Your Privacy is Protected" icon="lock">
+  Gantt Maker's local-only architecture means your project data is as private and secure as the device you're using. No external services, no data collection, no compromises.
+</Card>
+
+---
+
+**Last updated**: March 2026
+
+*This privacy documentation reflects Gantt Maker's current architecture and practices. Since the application operates entirely locally, there are no external privacy policies or terms of service.*

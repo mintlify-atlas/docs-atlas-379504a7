@@ -1,0 +1,311 @@
+---
+title: 'Time Blocks'
+description: 'Define non-working hours and custom availability schedules'
+icon: 'clock'
+---
+
+## Overview
+
+Time blocks allow you to define precise non-working hours within your project timeline. This feature is especially powerful when using **Hour Mode**, enabling you to model real-world availability constraints and optimize resource allocation.
+
+<Note>
+  Time blocks work seamlessly with both Date Mode and Hour Mode. In Hour Mode, you can achieve millisecond precision in your project planning.
+</Note>
+
+## Understanding Time Blocks
+
+Time blocks represent periods when work cannot be performed, such as:
+- Lunch breaks
+- After-hours periods
+- Team meeting times
+- Maintenance windows
+- Personal availability constraints
+
+## Defining Non-Working Hours
+
+### Basic Configuration
+
+1. Navigate to the **Configuration** panel
+2. Select the **Time Blocks** section
+3. Click **Add Time Block**
+4. Define your non-working period:
+   - Start time
+   - End time
+   - Days of week (optional)
+   - Label (e.g., "Lunch Break", "After Hours")
+
+### Default Non-Working Hours
+
+A typical workday configuration might look like:
+
+```json
+{
+  "timeBlocks": [
+    {
+      "label": "Before Work",
+      "start": "00:00",
+      "end": "09:00",
+      "days": ["Mon", "Tue", "Wed", "Thu", "Fri"]
+    },
+    {
+      "label": "Lunch Break",
+      "start": "12:00",
+      "end": "13:00",
+      "days": ["Mon", "Tue", "Wed", "Thu", "Fri"]
+    },
+    {
+      "label": "After Hours",
+      "start": "18:00",
+      "end": "23:59",
+      "days": ["Mon", "Tue", "Wed", "Thu", "Fri"]
+    },
+    {
+      "label": "Weekend",
+      "start": "00:00",
+      "end": "23:59",
+      "days": ["Sat", "Sun"]
+    }
+  ]
+}
+```
+
+<Tip>
+  Start with a standard 9-5 workday template and customize it based on your team's actual schedule. This ensures realistic timeline calculations from day one.
+</Tip>
+
+## Custom Time Blocks for Availability
+
+### Individual Availability Patterns
+
+Different team members may have unique availability:
+
+- **Part-time employees**: Define their working hours precisely
+- **Contractors**: Model limited availability windows
+- **Global teams**: Account for timezone differences
+- **Flexible schedules**: Support various work arrangements
+
+### Creating Person-Specific Time Blocks
+
+1. Select a team member from your project
+2. Click **Add Personal Time Block**
+3. Define their specific non-working hours
+4. The system will automatically adjust tasks assigned to them
+
+```javascript
+// Example: Part-time developer working mornings only
+{
+  "assignee": "Sarah Chen",
+  "timeBlocks": [
+    {
+      "label": "Afternoon Unavailable",
+      "start": "13:00",
+      "end": "23:59",
+      "days": ["Mon", "Wed", "Fri"]
+    }
+  ]
+}
+```
+
+<Note>
+  Personal time blocks override global time blocks. This allows you to create general rules while accommodating individual exceptions.
+</Note>
+
+## Multiple Time Block Configurations
+
+Manage different scheduling scenarios with multiple configuration profiles:
+
+### Configuration Profiles
+
+**Standard Operations**
+- Regular business hours
+- Standard lunch breaks
+- Normal team availability
+
+**Crunch Time**
+- Extended working hours
+- Reduced break times
+- Increased availability
+
+**Maintenance Mode**
+- Limited system access
+- Restricted work periods
+- Extended non-working blocks
+
+### Switching Between Configurations
+
+1. Navigate to **Configuration** > **Time Block Profiles**
+2. Select from your saved profiles
+3. Click **Apply Profile**
+4. Timeline automatically recalculates
+
+<Tip>
+  Create seasonal profiles (summer hours, holiday schedule) in advance and switch between them as needed.
+</Tip>
+
+## Use Cases for Time Exclusions
+
+### Software Development Teams
+
+**Daily Stand-ups and Meetings**
+```json
+{
+  "label": "Daily Stand-up",
+  "start": "09:00",
+  "end": "09:30",
+  "days": ["Mon", "Tue", "Wed", "Thu", "Fri"]
+}
+```
+
+**Focus Time Protection**
+```json
+{
+  "label": "Deep Work - No Interruptions",
+  "start": "14:00",
+  "end": "17:00",
+  "days": ["Tue", "Thu"]
+}
+```
+
+### Healthcare Facilities
+
+**Shift Transitions**
+```json
+{
+  "label": "Shift Handover",
+  "start": "07:00",
+  "end": "07:30",
+  "days": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+}
+```
+
+### Manufacturing Operations
+
+**Equipment Maintenance Windows**
+```json
+{
+  "label": "Preventive Maintenance",
+  "start": "22:00",
+  "end": "06:00",
+  "days": ["Fri"]
+}
+```
+
+### Global Teams
+
+**Timezone Overlap Windows**
+```json
+{
+  "label": "APAC Team Offline",
+  "start": "00:00",
+  "end": "08:00",
+  "days": ["Mon", "Tue", "Wed", "Thu", "Fri"]
+}
+```
+
+## Impact on Hour Mode
+
+When using Hour Mode, time blocks enable **millisecond-precise planning**:
+
+### Automatic Task Scheduling
+
+- Tasks automatically flow around time blocks
+- Duration calculations exclude blocked periods
+- Resource allocation respects availability constraints
+- Dependencies adjust intelligently
+
+### Visual Timeline Display
+
+In Hour Mode, you'll see:
+- Blocked periods with distinctive shading
+- Clear boundaries between working and non-working hours
+- Task bars that intelligently wrap around blocks
+- Hover tooltips explaining each time block
+
+<Note>
+  The precision of Hour Mode combined with time blocks makes it invaluable for intensive projects with tight deadlines and complex coordination requirements.
+</Note>
+
+## Advanced Features
+
+### Recurring Time Blocks
+
+Set up patterns that repeat:
+- **Daily**: Same time every day
+- **Weekly**: Specific days each week
+- **Bi-weekly**: Every other week pattern
+- **Monthly**: First Monday, last Friday, etc.
+
+### Temporary Time Blocks
+
+For one-time events:
+- Conference attendance
+- Training sessions
+- Team building events
+- Client presentations
+
+### Exception Handling
+
+<Tip>
+  Create exceptions to your time blocks for special circumstances. For example, enable work during a normally blocked time for a critical deadline.
+</Tip>
+
+1. Right-click on a time block
+2. Select **Add Exception**
+3. Specify the date and modified hours
+4. Exception will override the standard block for that day only
+
+## Managing Time Blocks
+
+### Best Practices
+
+1. **Model reality**: Configure blocks to match actual team behavior
+2. **Communicate clearly**: Label blocks descriptively
+3. **Review regularly**: Update blocks as team patterns change
+4. **Test impact**: Review timeline after adding blocks to verify results
+5. **Document exceptions**: Keep notes on any special case handling
+
+### Bulk Operations
+
+- **Duplicate blocks**: Copy common patterns across days
+- **Import/Export**: Share time block configurations between projects
+- **Template library**: Save frequently used configurations
+- **Batch edit**: Modify multiple blocks simultaneously
+
+### Visual Management
+
+The timeline view provides visual feedback:
+- Color-coded blocks for different categories
+- Opacity variations for different priority levels
+- Pattern fills for recurring vs. one-time blocks
+- Interactive tooltips with block details
+
+## Performance Considerations
+
+<Note>
+  Time blocks are calculated in real-time as you edit your timeline. For optimal performance with large projects (100+ tasks), keep time blocks simple and avoid excessive overlap.
+</Note>
+
+### Optimization Tips
+
+1. Use broader blocks when possible (e.g., "After Hours" instead of multiple small blocks)
+2. Consolidate similar blocks into single entries
+3. Remove unused or expired time blocks
+4. Archive old configurations rather than accumulating many profiles
+
+## Integration with Other Features
+
+Time blocks work seamlessly with:
+
+- **Date Exclusions**: Compound effect for maximum accuracy
+- **Team Colors**: Visual distinction of who's affected
+- **Export Functions**: Include time blocks in exported data
+- **LocalStorage Auto-save**: Configurations persist automatically
+
+<CardGroup cols={2}>
+  <Card title="Excluding Dates" icon="calendar-xmark" href="/guide/excluding-dates">
+    Configure date-level exclusions like holidays and weekends
+  </Card>
+  <Card title="Customization" icon="palette" href="/guide/customization">
+    Personalize colors, themes, and visual settings
+  </Card>
+</CardGroup>

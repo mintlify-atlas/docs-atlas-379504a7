@@ -1,0 +1,160 @@
+---
+title: 'Excluding Dates'
+description: 'Configure date exclusions to match your real working schedule'
+icon: 'calendar-xmark'
+---
+
+## Overview
+
+Gantt Maker's intelligent date exclusion system automatically adjusts your project timelines to account for non-working days. This ensures your schedules reflect actual work periods, making deadlines more accurate and realistic.
+
+## Excluding Weekends
+
+By default, Gantt Maker can automatically exclude weekends from your project timeline calculations.
+
+<Note>
+  When weekend exclusion is enabled, tasks spanning across weekends will automatically extend to the next working day, ensuring accurate deadline calculations.
+</Note>
+
+### How It Works
+
+1. Navigate to the **Configuration** panel
+2. Toggle the "Exclude Weekends" option
+3. Your timeline will automatically recalculate
+4. All tasks will adjust to skip Saturday and Sunday
+
+```javascript
+// Example: A 5-day task starting Friday
+// Without exclusion: Friday → Tuesday
+// With exclusion: Friday → Thursday (skips weekend)
+```
+
+## Excluding Specific Dates
+
+Beyond weekends, you can exclude specific dates such as:
+
+- **Public holidays** (national or regional)
+- **Company events** (all-hands meetings, team offsites)
+- **Planned shutdowns** (end-of-year closures)
+- **Team unavailability** (training days, conferences)
+
+### Adding Excluded Dates
+
+1. Open the **Configuration** panel
+2. Navigate to the "Date Exclusions" section
+3. Click **Add Excluded Date**
+4. Select the date(s) to exclude
+5. Add an optional label (e.g., "Independence Day", "Company Offsite")
+
+<Tip>
+  Create a comprehensive exclusion list at the start of your project to avoid timeline surprises later. You can always adjust it as needs change.
+</Tip>
+
+### Example Exclusion List
+
+```json
+{
+  "excludedDates": [
+    {
+      "date": "2025-01-01",
+      "label": "New Year's Day"
+    },
+    {
+      "date": "2025-07-04",
+      "label": "Independence Day"
+    },
+    {
+      "date": "2025-12-25",
+      "label": "Christmas Day"
+    }
+  ]
+}
+```
+
+## Impact on Timeline Calculations
+
+When dates are excluded, Gantt Maker intelligently adjusts your entire project timeline:
+
+### Automatic Adjustments
+
+- **Task duration extension**: Tasks spanning excluded dates automatically extend by the number of excluded days
+- **Dependency shifts**: Tasks with dependencies cascade forward when predecessor tasks are affected
+- **Milestone updates**: Project milestones automatically adjust to reflect realistic completion dates
+- **Resource allocation**: Team member assignments remain accurate across the adjusted timeline
+
+### Visual Indicators
+
+<Note>
+  Excluded dates appear with a distinct visual treatment in the Gantt chart, making it easy to identify non-working periods at a glance.
+</Note>
+
+Excluded dates are displayed with:
+- Grayed-out background in the timeline
+- Diagonal stripe pattern (optional)
+- Tooltip showing the exclusion reason when hovering
+
+## Managing Exclusion Lists
+
+### Best Practices
+
+1. **Plan ahead**: Add known holidays and events at project start
+2. **Regional awareness**: Include holidays relevant to your team's location(s)
+3. **Document reasons**: Label each exclusion for team clarity
+4. **Regular updates**: Review and update your exclusion list quarterly
+
+### Bulk Import
+
+For large exclusion lists, you can import dates in bulk:
+
+1. Prepare a CSV or JSON file with your excluded dates
+2. Navigate to **Configuration** > **Import Exclusions**
+3. Select your file and confirm
+4. Review the imported dates in the exclusion list
+
+<Tip>
+  Share your exclusion list template across projects to maintain consistency. Export once, import everywhere.
+</Tip>
+
+### Editing and Removing Exclusions
+
+- **Edit**: Click on any excluded date to modify the label or date
+- **Remove**: Click the trash icon next to an exclusion to delete it
+- **Bulk delete**: Select multiple exclusions and remove them at once
+- **Temporary disable**: Toggle individual exclusions off without deleting them
+
+## Common Use Cases
+
+### Global Teams
+
+For teams spread across multiple countries:
+- Create location-specific exclusion profiles
+- Apply relevant holidays based on team member location
+- Switch between profiles as project composition changes
+
+### Seasonal Projects
+
+- Exclude summer vacation periods for academic projects
+- Account for holiday shopping blackouts in retail
+- Plan around seasonal business cycles
+
+### Compliance Requirements
+
+Certain industries require specific non-working periods:
+- Financial audits during quarter-end
+- Healthcare facility maintenance windows
+- Manufacturing safety inspection days
+
+<Note>
+  All exclusion configurations are saved automatically using LocalStorage, ensuring your settings persist across sessions.
+</Note>
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Time Blocks" icon="clock" href="/guide/time-blocks">
+    Configure non-working hours for more granular control
+  </Card>
+  <Card title="Customization" icon="palette" href="/guide/customization">
+    Personalize your Gantt chart appearance and settings
+  </Card>
+</CardGroup>

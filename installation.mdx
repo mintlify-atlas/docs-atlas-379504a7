@@ -1,0 +1,447 @@
+---
+title: Installation Guide
+description: Download and setup instructions for Gantt Maker on Windows
+---
+
+# Installation Guide
+
+Gantt Maker is a standalone Windows application that requires no complex installation. Simply download the executable and launch it to start planning your projects visually.
+
+## System Requirements
+
+<CardGroup cols={2}>
+  <Card title="Operating System" icon="windows">
+    Windows 7 or later (Windows 10/11 recommended)
+  </Card>
+  <Card title="Web Browser" icon="globe">
+    Modern browser: Chrome 90+, Firefox 88+, Edge 90+, or Safari 14+
+  </Card>
+  <Card title="Storage" icon="hard-drive">
+    Less than 5MB disk space for the executable
+  </Card>
+  <Card title="Internet" icon="wifi">
+    Required only for initial download (app works offline)
+  </Card>
+</CardGroup>
+
+<Note>
+No administrator privileges required - Gantt Maker runs directly without installation.
+</Note>
+
+## Download
+
+### Official Download Link
+
+Download the latest version of Gantt Maker from the official GitHub repository:
+
+<Card
+  title="Download GANNTpixelbits.exe"
+  icon="download"
+  href="https://github.com/Pacheco55/Gantt-Maker/raw/refs/heads/main/GANNTpixelbits.exe"
+>
+  Click to download the latest version from GitHub
+</Card>
+
+<Warning>
+Only download Gantt Maker from the official GitHub repository. Third-party sources may contain modified or unsafe versions.
+</Warning>
+
+### Alternative Download Methods
+
+<CodeGroup>
+
+```bash Windows Command Prompt
+# Download using curl
+curl -L -o GANNTpixelbits.exe https://github.com/Pacheco55/Gantt-Maker/raw/refs/heads/main/GANNTpixelbits.exe
+```
+
+```bash PowerShell
+# Download using PowerShell
+Invoke-WebRequest -Uri "https://github.com/Pacheco55/Gantt-Maker/raw/refs/heads/main/GANNTpixelbits.exe" -OutFile "GANNTpixelbits.exe"
+```
+
+```bash Git Bash / WSL
+# Download using wget
+wget https://github.com/Pacheco55/Gantt-Maker/raw/refs/heads/main/GANNTpixelbits.exe
+```
+
+</CodeGroup>
+
+## Launch Instructions
+
+<Steps>
+  <Step title="Locate the downloaded file">
+    Navigate to your Downloads folder (or wherever you saved `GANNTpixelbits.exe`).
+  </Step>
+  
+  <Step title="Launch the application">
+    Double-click `GANNTpixelbits.exe` to launch Gantt Maker.
+    
+    <Note>
+    Windows may display a SmartScreen warning for unrecognized applications. Click "More info" and then "Run anyway" to proceed.
+    </Note>
+  </Step>
+  
+  <Step title="Application opens in browser">
+    The application will automatically open in your default web browser, displaying the Gantt Maker interface.
+    
+    <Tip>
+    The executable acts as a local server that hosts the HTML5 application. You can bookmark the page for quick access.
+    </Tip>
+  </Step>
+</Steps>
+
+## Browser Compatibility
+
+Gantt Maker is built with modern HTML5 web standards and works on all current browsers:
+
+<Tabs>
+  <Tab title="Chrome / Edge">
+    **Recommended browsers**
+    
+    - Chrome 90 or later
+    - Edge 90 or later (Chromium-based)
+    
+    <Check>
+    Full support for all features including LocalStorage, responsive design, and drag-and-drop.
+    </Check>
+  </Tab>
+  
+  <Tab title="Firefox">
+    **Fully supported**
+    
+    - Firefox 88 or later
+    
+    <Check>
+    Complete feature parity with Chrome/Edge.
+    </Check>
+  </Tab>
+  
+  <Tab title="Safari">
+    **Compatible**
+    
+    - Safari 14 or later
+    
+    <Note>
+    Some drag-and-drop interactions may feel slightly different due to Safari's touch event handling.
+    </Note>
+  </Tab>
+</Tabs>
+
+### JavaScript Requirement
+
+<Warning>
+Gantt Maker requires JavaScript to be enabled in your browser. If you see a blank page, check your browser's JavaScript settings.
+</Warning>
+
+### LocalStorage Support
+
+Gantt Maker stores your project data using browser LocalStorage:
+
+- **Storage capacity**: Typically 5-10MB per domain
+- **Persistence**: Data remains until you clear browser data
+- **Privacy**: All data stays on your device - no cloud uploads
+
+<Tip>
+Regularly export your projects to JSON files to create backups that aren't tied to your browser.
+</Tip>
+
+## Troubleshooting
+
+### Application Won't Launch
+
+<AccordionGroup>
+  <Accordion title="Windows SmartScreen blocking the file">
+    **Symptom**: Windows prevents the file from running with a security warning.
+    
+    **Solution**:
+    1. Right-click `GANNTpixelbits.exe`
+    2. Select **Properties**
+    3. Check the box next to **Unblock** at the bottom
+    4. Click **Apply** and **OK**
+    5. Double-click the file again
+    
+    Alternatively:
+    1. Click **More info** in the SmartScreen dialog
+    2. Click **Run anyway**
+  </Accordion>
+  
+  <Accordion title="Browser doesn't open automatically">
+    **Symptom**: The executable runs but no browser window appears.
+    
+    **Solution**:
+    1. Check if a browser window opened in the background
+    2. Look for a localhost address in your taskbar
+    3. Manually open your browser and navigate to:
+       - `http://localhost:8080` or
+       - `http://127.0.0.1:8080`
+    4. Try a different browser if the page doesn't load
+  </Accordion>
+  
+  <Accordion title="Antivirus software blocking execution">
+    **Symptom**: Antivirus program quarantines or deletes the file.
+    
+    **Solution**:
+    1. Add `GANNTpixelbits.exe` to your antivirus exclusion list
+    2. Restore the file from quarantine if deleted
+    3. Re-download if necessary
+    
+    <Note>
+    Gantt Maker is open source and safe. Antivirus false positives can occur with unsigned executables.
+    </Note>
+  </Accordion>
+  
+  <Accordion title="Port already in use">
+    **Symptom**: Error message about port already being used.
+    
+    **Solution**:
+    1. Close any other local development servers
+    2. Close any other instances of Gantt Maker
+    3. Restart your computer if the issue persists
+    4. Check for applications using common ports (8080, 8000, 3000)
+  </Accordion>
+</AccordionGroup>
+
+### Interface Issues
+
+<AccordionGroup>
+  <Accordion title="Blank or partially loaded page">
+    **Symptoms**: Page is blank, missing elements, or doesn't respond to clicks.
+    
+    **Solutions**:
+    1. **Check JavaScript**: Ensure JavaScript is enabled in your browser
+    2. **Clear cache**: Press `Ctrl+Shift+Delete` and clear cached files
+    3. **Hard refresh**: Press `Ctrl+F5` to reload without cache
+    4. **Try another browser**: Test in Chrome, Firefox, or Edge
+    5. **Check console**: Press `F12` and look for errors in the Console tab
+  </Accordion>
+  
+  <Accordion title="Data not saving">
+    **Symptom**: Changes disappear when you refresh the page.
+    
+    **Cause**: LocalStorage may be disabled or full.
+    
+    **Solutions**:
+    1. Check if your browser allows LocalStorage:
+       - Open browser settings
+       - Search for "Site data" or "Cookies"
+       - Ensure LocalStorage is enabled
+    2. Clear old LocalStorage data from other sites
+    3. Use Export function to save projects as JSON files
+  </Accordion>
+  
+  <Accordion title="Layout looks wrong on mobile/tablet">
+    **Symptom**: Elements are misaligned or cut off on smaller screens.
+    
+    **Solution**:
+    Gantt Maker is responsive but optimized for desktop use:
+    - **Desktop**: Full feature set with all controls
+    - **Tablet**: Touch-optimized interface with core features
+    - **Mobile**: Focused view for critical tasks only
+    
+    <Tip>
+    For the best experience, use Gantt Maker on a desktop or tablet with at least 768px width.
+    </Tip>
+  </Accordion>
+  
+  <Accordion title="Drag-and-drop not working">
+    **Symptom**: Can't drag tasks between team members.
+    
+    **Solutions**:
+    1. **Check browser**: Safari may have different drag behavior
+    2. **Use alternative**: Click the task and use the assignment dropdown
+    3. **Try touch events**: On touch devices, long-press then drag
+    4. **Update browser**: Ensure you're using the latest version
+  </Accordion>
+</AccordionGroup>
+
+### Performance Issues
+
+<AccordionGroup>
+  <Accordion title="Slow or laggy interface">
+    **Solutions**:
+    1. **Close other tabs**: Free up browser resources
+    2. **Clear browser cache**: Remove old cached data
+    3. **Restart browser**: Fresh start can improve performance
+    4. **Check system resources**: Close unnecessary applications
+    5. **Use a modern browser**: Chrome/Edge typically perform best
+  </Accordion>
+  
+  <Accordion title="Large projects slow to load">
+    **Symptom**: Projects with many tasks take time to render.
+    
+    **Best practices**:
+    - Break large projects into phases
+    - Archive completed tasks
+    - Export and start fresh for new project phases
+    - Use Date Mode instead of Hour Mode for long-term projects
+  </Accordion>
+</AccordionGroup>
+
+## Advanced Features
+
+### Weekend and Date Exclusions
+
+Configure which days are excluded from your timeline:
+
+<Steps>
+  <Step title="Access exclusion settings">
+    Click the **Settings** or **Configuration** button in the interface.
+  </Step>
+  
+  <Step title="Enable weekend exclusion">
+    Toggle the **Exclude Weekends** option to automatically skip Saturdays and Sundays in your timeline calculations.
+    
+    <Tip>
+    Perfect for traditional Monday-Friday work schedules.
+    </Tip>
+  </Step>
+  
+  <Step title="Add custom exclusions">
+    Specify individual dates to exclude (holidays, team days off, etc.).
+    
+    This ensures your timeline reflects actual working time.
+  </Step>
+</Steps>
+
+### Custom Time Blocks
+
+Define non-working hours for hour-based timelines:
+
+<Steps>
+  <Step title="Switch to Hour Mode">
+    Custom time blocks are available when using Hour Mode for precise scheduling.
+  </Step>
+  
+  <Step title="Define working hours">
+    Set your team's working hours (e.g., 9:00 AM - 5:00 PM).
+    
+    Non-working hours will be visually distinguished in the timeline.
+  </Step>
+  
+  <Step title="Add break periods">
+    Specify lunch breaks or other non-working periods within the day.
+  </Step>
+</Steps>
+
+### Color Palette Customization
+
+Match Gantt Maker to your brand:
+
+1. **Team member colors**: Click any color swatch to open the color picker
+2. **Theme options**: Some versions support light/dark mode preferences
+3. **Consistent branding**: Use your company's color scheme for team assignments
+
+<Note>
+Color settings are saved with your project data in LocalStorage.
+</Note>
+
+### Export and Import Projects
+
+<Tabs>
+  <Tab title="Export">
+    **Save projects as JSON files**
+    
+    1. Click the **Export** button in the interface
+    2. Choose a file name and location
+    3. Save the `.json` file
+    
+    **Benefits**:
+    - Create backups independent of browser storage
+    - Share projects with team members
+    - Maintain multiple versions/scenarios
+    - Migrate between computers
+  </Tab>
+  
+  <Tab title="Import">
+    **Load previously exported projects**
+    
+    1. Click the **Import** or **Load** button
+    2. Select your `.json` project file
+    3. The project loads with all team members, tasks, and settings preserved
+    
+    <Warning>
+    Importing a project may overwrite your current work. Export your current project first if you want to keep it.
+    </Warning>
+  </Tab>
+</Tabs>
+
+## Data Management Best Practices
+
+<CardGroup cols={2}>
+  <Card title="Regular Exports" icon="clock">
+    Export your project at the end of each work session or after major changes
+  </Card>
+  <Card title="Version Control" icon="code-branch">
+    Save multiple versions with descriptive names (e.g., "project-v1-baseline.json", "project-v2-revised.json")
+  </Card>
+  <Card title="Backup Strategy" icon="shield">
+    Keep exported JSON files in cloud storage (Dropbox, Google Drive) for redundancy
+  </Card>
+  <Card title="Team Sharing" icon="share-nodes">
+    Share exported JSON files via email or shared drives for team collaboration
+  </Card>
+</CardGroup>
+
+<Tip>
+Create a naming convention for your exports: `[ProjectName]-[Date]-[Version].json` (e.g., `Website-Redesign-2026-03-10-v1.json`)
+</Tip>
+
+## Privacy and Security
+
+### Your Data Stays Local
+
+<Check>
+Gantt Maker stores all data locally on your device using browser LocalStorage. No data is transmitted to external servers.
+</Check>
+
+**What this means**:
+- ✓ Complete privacy - no tracking or analytics
+- ✓ Works offline after initial download
+- ✓ No account registration required
+- ✓ Zero data collection
+- ✓ No internet dependency
+
+### Data Storage Location
+
+Your project data is stored in:
+- **Browser LocalStorage**: Tied to the specific browser and domain
+- **Exported JSON files**: Wherever you save them on your file system
+
+<Warning>
+**Clearing browser data will delete your projects**. Always export important projects to JSON files.
+</Warning>
+
+### Security Considerations
+
+- **Local only**: Data never leaves your device unless you explicitly export it
+- **No cloud sync**: No risk of cloud data breaches
+- **Open source**: Code can be audited for security
+- **No dependencies**: Minimal attack surface
+
+## Getting Help
+
+If you encounter issues not covered in this guide:
+
+<CardGroup cols={2}>
+  <Card title="GitHub Issues" icon="github" href="https://github.com/Pacheco55/Gantt-Maker">
+    Report bugs or request features on the official repository
+  </Card>
+  <Card title="YouTube Channel" icon="youtube" href="https://www.youtube.com/channel/UCkLUjIeYTECtigFdcQjWu5Q">
+    Watch tutorials and demos from PIXELBITS Studio
+  </Card>
+  <Card title="Twitter" icon="twitter" href="https://x.com/pixelbitstud">
+    Follow for updates and tips
+  </Card>
+  <Card title="Twitch" icon="twitch" href="https://www.twitch.tv/pixelbits_studio/about">
+    Join live streams and ask questions
+  </Card>
+</CardGroup>
+
+## Next Steps
+
+Now that you have Gantt Maker installed and configured, head over to the [Quickstart guide](/quickstart) to create your first project.
+
+<Card title="Quickstart Guide" icon="rocket" href="/quickstart">
+  Learn how to create your first Gantt chart in 30 seconds
+</Card>

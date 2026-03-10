@@ -1,0 +1,380 @@
+---
+title: Smart Configuration
+description: Intelligent scheduling with weekend exclusion, custom date blocking, and non-working hour configuration
+---
+
+Gantt Maker's smart configuration features ensure your project timeline reflects real working conditions by automatically excluding weekends, holidays, and custom non-working periods.
+
+## Overview
+
+Smart scheduling adapts your Gantt chart to match actual work patterns, preventing unrealistic schedules and ensuring accurate delivery estimates.
+
+<Tip>
+  Configure your actual working hours and days to generate realistic timelines that account for real-world constraints.
+</Tip>
+
+## Excluding Weekends
+
+Automatically exclude weekends from your project timeline:
+
+### How Weekend Exclusion Works
+
+<Steps>
+  <Step title="Enable weekend exclusion">
+    Toggle the "Exclude weekends" option in your project configuration.
+  </Step>
+  
+  <Step title="Tasks skip Saturdays and Sundays">
+    When enabled, task durations automatically skip over weekend days.
+  </Step>
+  
+  <Step title="Timeline adjusts automatically">
+    A 5-day task starting on Thursday will end on Wednesday of the following week, not Monday.
+  </Step>
+</Steps>
+
+<Note>
+  Weekend exclusion is particularly important for date mode planning, where multi-day tasks need to account for non-working days.
+</Note>
+
+### Weekend Exclusion Benefits
+
+- **Realistic estimates**: Task durations reflect actual working days
+- **Accurate deadlines**: End dates account for weekends automatically
+- **Resource planning**: Prevents scheduling work on non-working days
+- **Stakeholder clarity**: Timeline shows true delivery dates
+
+### When to Use Weekend Exclusion
+
+<Tabs>
+  <Tab title="Enable for">
+    **Enable weekend exclusion when:**
+    
+    - Your team works standard Monday-Friday schedules
+    - Planning corporate or business projects
+    - Coordinating with external stakeholders on business hours
+    - Managing projects with predictable weekly rhythms
+    - Educational projects following school week schedules
+  </Tab>
+  
+  <Tab title="Disable for">
+    **Disable weekend exclusion when:**
+    
+    - Team works continuous shifts (24/7 operations)
+    - Managing event production with weekend work
+    - Personal projects with flexible schedules
+    - International teams with rotating weekend coverage
+    - Startups with non-traditional work patterns
+  </Tab>
+</Tabs>
+
+## Excluding Specific Dates
+
+Block out holidays, company shutdowns, and other non-working dates:
+
+### Custom Date Exclusion
+
+<Steps>
+  <Step title="Access date exclusion settings">
+    Open the smart configuration panel and find the "Exclude specific dates" section.
+  </Step>
+  
+  <Step title="Add dates to exclude">
+    Enter dates that should be excluded from the timeline:
+    - Public holidays
+    - Company shutdown periods
+    - Team off-site events
+    - Known unavailable days
+  </Step>
+  
+  <Step title="Tasks skip excluded dates">
+    Task durations automatically account for excluded dates, extending end dates as needed.
+  </Step>
+  
+  <Step title="Visual indicators">
+    Excluded dates appear with distinct styling in your timeline view.
+  </Step>
+</Steps>
+
+<Info>
+  Specific date exclusions work in combination with weekend exclusion, providing comprehensive control over your working calendar.
+</Info>
+
+### Common Date Exclusions
+
+**Public Holidays:**
+- New Year's Day
+- National holidays
+- Religious observances
+- Local/regional holidays
+
+**Company Events:**
+- Annual shutdown periods
+- All-hands meetings
+- Company retreats and off-sites
+- Training days
+
+**Project-Specific Blocks:**
+- Client unavailability
+- Vendor maintenance windows
+- Conference attendance
+- Pre-scheduled team vacations
+
+<Tip>
+  Set up your standard holiday calendar at project start to ensure consistent scheduling throughout the project lifecycle.
+</Tip>
+
+## Custom Time Blocks (Non-Working Hours)
+
+Define specific hours that should be excluded from hourly scheduling:
+
+### Hour Mode Time Blocking
+
+When using hour mode for precision planning, configure non-working hours:
+
+<Steps>
+  <Step title="Switch to hour mode">
+    Ensure your timeline is set to hour mode for hourly precision.
+  </Step>
+  
+  <Step title="Define working hours">
+    Specify your team's working hours (e.g., 9:00 AM - 5:00 PM).
+  </Step>
+  
+  <Step title="Block non-working hours">
+    Hours outside the working window are automatically excluded from scheduling.
+  </Step>
+  
+  <Step title="Tasks respect time blocks">
+    Task durations skip non-working hours, preventing unrealistic overnight scheduling.
+  </Step>
+</Steps>
+
+### Time Block Scenarios
+
+<Tabs>
+  <Tab title="Standard Business Hours">
+    **9:00 AM - 5:00 PM Schedule**
+    
+    Configure for typical office environments:
+    - 8-hour working day
+    - 1-hour lunch break (optional exclusion)
+    - Tasks never scheduled before 9 AM or after 5 PM
+    - Multi-hour tasks span multiple days if needed
+    
+    **Example:** A 10-hour task starting at 2:00 PM will end at 12:00 PM the next day (3 hours on day 1, 7 hours on day 2).
+  </Tab>
+  
+  <Tab title="Shift Work">
+    **Custom Shift Schedules**
+    
+    Configure for shift-based operations:
+    - Morning shift: 6:00 AM - 2:00 PM
+    - Afternoon shift: 2:00 PM - 10:00 PM
+    - Night shift: 10:00 PM - 6:00 AM
+    - Tasks scheduled only during active shift hours
+    
+    **Example:** Set working hours to match your team's shift for accurate scheduling.
+  </Tab>
+  
+  <Tab title="Flexible Hours">
+    **Distributed Team Hours**
+    
+    Configure for teams across time zones:
+    - Core overlap hours (e.g., 12:00 PM - 4:00 PM UTC)
+    - Individual team member availability windows
+    - Async-friendly scheduling
+    - Meetings only during overlap hours
+    
+    **Example:** Schedule collaborative tasks during core hours, individual tasks across broader windows.
+  </Tab>
+</Tabs>
+
+<Note>
+  Time block configuration is essential for consultant billing accuracy, ensuring hourly estimates match actual billable periods.
+</Note>
+
+## Adapting to Real Workflows
+
+Combine smart configuration features to mirror your actual work environment:
+
+### Complete Configuration Example
+
+**Scenario: Marketing Agency with Standard Hours**
+
+```
+Weekend Exclusion: Enabled (Monday-Friday work week)
+Excluded Dates:
+  - January 1 (New Year's Day)
+  - July 4 (Independence Day)
+  - December 24-26 (Holiday Shutdown)
+  - March 15 (Company Retreat)
+
+Working Hours (Hour Mode):
+  - Start: 9:00 AM
+  - End: 6:00 PM
+  - Lunch Break: 12:00 PM - 1:00 PM (excluded)
+```
+
+**Result:** All tasks respect the 9-6 working window, skip weekends, avoid holidays, and account for lunch breaks. Timeline estimates are realistic and achievable.
+
+### Configuration Benefits
+
+<Tabs>
+  <Tab title="Project Managers">
+    **Realistic planning and accurate estimates**
+    
+    - Set-it-and-forget-it calendar configuration
+    - Automatic timeline adjustments for holidays
+    - Stakeholder confidence in delivery dates
+    - No manual date calculations required
+  </Tab>
+  
+  <Tab title="Team Members">
+    **Work-life balance protection**
+    
+    - No tasks scheduled outside working hours
+    - Weekends respected automatically
+    - Vacation blocks prevent assignment conflicts
+    - Realistic workload expectations
+  </Tab>
+  
+  <Tab title="Clients">
+    **Transparent and accurate timelines**
+    
+    - Delivery dates account for real working days
+    - Holiday impacts visible in schedule
+    - No surprises from "forgotten" non-working days
+    - Professional scheduling practices
+  </Tab>
+</Tabs>
+
+## Real-World Applications
+
+### Software Development Team
+
+> "We manage sprints of 2 weeks with hourly precision. With weekend exclusion and our 9-5 working hours configured, our sprint planning automatically accounts for real developer availability. No more accidentally scheduling work for Saturday or 2 AM."
+
+**Configuration:**
+- Weekend exclusion: Enabled
+- Working hours: 9:00 AM - 5:00 PM
+- Excluded dates: Company holidays + team off-sites
+
+### Consulting Practice
+
+> "Managing multiple clients across different time zones used to be chaos. Now we configure core working hours and exclude client holiday calendars. Our hourly billing estimates are accurate and clients trust our timelines."
+
+**Configuration:**
+- Weekend exclusion: Enabled (with exceptions for urgent client work)
+- Working hours: 8:00 AM - 6:00 PM (core availability)
+- Excluded dates: Per-client holiday calendars
+- Custom blocks: Thursday afternoons (business development time)
+
+### Academic Research
+
+> "Organizing my doctoral thesis timeline with realistic working hours keeps me accountable. I configured my actual writing schedule (10 AM - 3 PM, my most productive hours) and excluded exam periods and conferences. My advisor loves the realistic milestone dates."
+
+**Configuration:**
+- Weekend exclusion: Disabled (flexible schedule)
+- Working hours: 10:00 AM - 3:00 PM (peak productivity)
+- Excluded dates: Conference travel, exam weeks, holidays
+- Custom blocks: Teaching commitments
+
+## Configuration Best Practices
+
+### Initial Setup
+
+<Steps>
+  <Step title="Start with standard patterns">
+    Begin with weekend exclusion and typical business hours (9-5).
+  </Step>
+  
+  <Step title="Add known holidays">
+    Enter all public holidays and company shutdown dates for the project period.
+  </Step>
+  
+  <Step title="Configure time blocks">
+    Set working hours that match your team's actual availability.
+  </Step>
+  
+  <Step title="Test with sample tasks">
+    Create test tasks to verify date calculations are accurate.
+  </Step>
+</Steps>
+
+### Ongoing Maintenance
+
+- **Review quarterly**: Update excluded dates for upcoming holidays
+- **Team changes**: Adjust working hours if team schedules shift
+- **Project phases**: Modify blocks for intensive periods (e.g., launch weeks)
+- **Retrospective tuning**: Refine based on actual vs. estimated completion times
+
+<Tip>
+  Share your configuration settings with stakeholders at project kickoff to align expectations on working patterns and delivery timelines.
+</Tip>
+
+### Common Configuration Patterns
+
+**Standard Corporate Project:**
+```
+✓ Weekend exclusion enabled
+✓ Public holidays excluded
+✓ 9-5 working hours
+✓ Lunch break optional
+```
+
+**24/7 Operations:**
+```
+✗ Weekend exclusion disabled
+✓ Shift-specific time blocks
+✓ Holiday skeleton crew coverage
+✓ Handoff periods marked
+```
+
+**Distributed Async Team:**
+```
+✗ Weekend exclusion disabled (flexible schedules)
+✓ Core overlap hours only
+✓ Individual availability windows
+✓ Multiple time zone support
+```
+
+**Academic/Research Project:**
+```
+✓/✗ Weekend exclusion (varies by individual)
+✓ Peak productivity hours configured
+✓ Conference and exam periods excluded
+✓ Advisor availability windows marked
+```
+
+## Integration with Timeline Features
+
+### Smart Configuration + Date Mode
+
+In date mode, smart configuration provides:
+- Automatic weekend skipping for multi-day tasks
+- Holiday-aware end date calculations
+- Business day counting for accurate estimates
+
+### Smart Configuration + Hour Mode
+
+In hour mode, smart configuration enables:
+- Hourly precision within working day boundaries
+- Overnight task prevention (tasks don't span midnight unrealistically)
+- Break period exclusions for accurate billable hour tracking
+- Shift-aware scheduling for 24/7 operations
+
+<Info>
+  Smart configuration settings persist across timeline mode switches, ensuring consistent working calendar enforcement regardless of planning granularity.
+</Info>
+
+## Technical Features
+
+- **Intelligent date math**: Algorithms automatically calculate task end dates accounting for all exclusions
+- **Visual indicators**: Excluded dates and non-working hours display with distinct styling
+- **Override capability**: Manually adjust specific tasks if needed to override smart scheduling
+- **Export includes config**: Saved projects include configuration for consistency across sessions
+
+<Note>
+  All configuration data is stored locally on your device, ensuring privacy while maintaining your custom working calendar across sessions.
+</Note>

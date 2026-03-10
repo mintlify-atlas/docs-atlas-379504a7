@@ -1,0 +1,263 @@
+---
+title: 'Troubleshooting'
+description: 'Solutions to common issues with Gantt Maker'
+---
+
+# Troubleshooting Guide
+
+Find solutions to common issues you might encounter while using Gantt Maker.
+
+## Application Launch Issues
+
+### Application Won't Launch or Start
+
+**Problem**: The application fails to open or shows a blank screen.
+
+**Solutions**:
+
+1. **Check Browser Compatibility**
+   - Ensure you're using a modern browser (Chrome, Firefox, Safari, or Edge)
+   - Update your browser to the latest version
+   - Try opening in a different browser to isolate the issue
+
+2. **Clear Browser Cache**
+   ```
+   Chrome: Settings → Privacy and Security → Clear browsing data
+   Firefox: Settings → Privacy & Security → Clear Data
+   Safari: Preferences → Privacy → Manage Website Data → Remove All
+   Edge: Settings → Privacy, search, and services → Clear browsing data
+   ```
+
+3. **Disable Browser Extensions**
+   - Ad blockers or privacy extensions may interfere with the application
+   - Try opening in incognito/private mode
+   - Disable extensions temporarily to test
+
+4. **Check JavaScript Settings**
+   - Ensure JavaScript is enabled in your browser
+   - Gantt Maker requires JavaScript to function
+
+<Warning>
+  If the application crashes immediately after launch, check your browser console (F12) for error messages that can help identify the issue.
+</Warning>
+
+## Display and Visual Issues
+
+### Display Issues in Browser
+
+**Problem**: Charts appear distorted, elements are misaligned, or colors don't display correctly.
+
+**Solutions**:
+
+1. **Check Browser Zoom Level**
+   - Reset zoom to 100% (Ctrl+0 or Cmd+0)
+   - Some layouts work best at default zoom levels
+
+2. **Adjust Screen Resolution**
+   - The application is responsive but works best at standard resolutions
+   - Try full-screen mode (F11) for better visibility
+
+3. **Clear LocalStorage**
+   - Corrupted display settings may be cached
+   - Open browser console (F12)
+   - Type: `localStorage.clear()` and press Enter
+   - Reload the page
+
+<Warning>
+  Clearing LocalStorage will delete your saved projects. Export your data before clearing if you want to preserve it.
+</Warning>
+
+4. **Try Different Device**
+   - Test on desktop, tablet, or mobile to see if it's device-specific
+   - The application adapts to different screen sizes
+
+<Tip>
+  For optimal desktop experience, use a screen resolution of 1920x1080 or higher with a modern browser.
+</Tip>
+
+### Colors Not Displaying Correctly
+
+**Problem**: Team member colors appear wrong or don't show.
+
+**Solutions**:
+
+1. Refresh the page to reload color assignments
+2. Check if dark mode is affecting color visibility
+3. Reassign colors to team members in the configuration
+4. Ensure no browser extensions are modifying page colors
+
+## Data and Saving Issues
+
+### Data Not Saving
+
+**Problem**: Changes to your project aren't persisting between sessions.
+
+**Solutions**:
+
+1. **Check LocalStorage Availability**
+   - Some browsers in private/incognito mode disable LocalStorage
+   - Ensure you're using normal browsing mode
+   - Check browser privacy settings aren't blocking local storage
+
+2. **Verify Storage Quota**
+   - LocalStorage has size limits (typically 5-10MB)
+   - Very large projects might exceed this limit
+   - Export and split into smaller projects if needed
+
+3. **Test Auto-Save Functionality**
+   - Make a small change and wait a few seconds
+   - Refresh the page to see if change persists
+   - If not persisting, check browser console for errors
+
+4. **Browser-Specific Issues**
+   - Safari: Check Settings → Privacy → Block All Cookies is disabled
+   - Firefox: Ensure "Delete cookies and site data when Firefox is closed" is unchecked
+   - Chrome: Check Settings → Privacy → Cookies allows local data
+
+<Tip>
+  Regularly export your projects as JSON files to maintain backups independent of browser storage.
+</Tip>
+
+### Lost Project Data
+
+**Problem**: Your project disappeared or shows old data.
+
+**Solutions**:
+
+1. **Check Browser Profile**
+   - Ensure you're using the same browser and profile where you created the project
+   - Data is stored per browser and profile
+
+2. **Look for Exported Files**
+   - Check your downloads folder for exported JSON files
+   - Import the most recent export to restore your project
+
+3. **Verify Browser History**
+   - If you switched browsers, data won't transfer automatically
+   - Export from the original browser and import to the new one
+
+<Warning>
+  Data in LocalStorage can be cleared by browser cleaning tools or privacy software. Always maintain exported backups of important projects.
+</Warning>
+
+## Performance Issues
+
+### Performance with Large Projects
+
+**Problem**: Application runs slowly or becomes unresponsive with large projects.
+
+**Solutions**:
+
+1. **Optimize Project Size**
+   - Break large projects into smaller phases
+   - Archive completed tasks regularly
+   - Keep active project focused on current/upcoming work
+
+2. **Close Unnecessary Browser Tabs**
+   - Each tab consumes memory
+   - Close other applications to free up system resources
+
+3. **Reduce Visual Complexity**
+   - Limit the number of team members visible at once
+   - Zoom into specific time ranges rather than viewing entire timeline
+   - Use date mode instead of hour mode for long-duration projects
+
+4. **Browser Performance Settings**
+   - Ensure hardware acceleration is enabled
+   - Chrome: Settings → System → Use hardware acceleration
+   - Firefox: Settings → General → Performance
+
+<Tip>
+  For projects with 100+ tasks, consider splitting into multiple smaller project files organized by phase or team.
+</Tip>
+
+### Slow Timeline Rendering
+
+**Problem**: Timeline takes a long time to render or scroll is laggy.
+
+**Solutions**:
+
+1. Reduce the visible time range (zoom into specific weeks/days)
+2. Limit the number of concurrent tasks displayed
+3. Use a more powerful device for very complex projects
+4. Export the project and reload it fresh
+5. Clear browser cache and reload
+
+## Import/Export Issues
+
+### Cannot Export Project
+
+**Problem**: Export functionality doesn't work or file doesn't download.
+
+**Solutions**:
+
+1. Check browser download settings and permissions
+2. Ensure pop-ups aren't blocked
+3. Try a different browser
+4. Verify sufficient disk space for download
+
+### Cannot Import Project File
+
+**Problem**: JSON import fails or shows error.
+
+**Solutions**:
+
+1. **Verify File Format**
+   - Ensure the file is a valid JSON file
+   - Check file wasn't corrupted during transfer
+   - Open file in text editor to verify it's properly formatted JSON
+
+2. **Check File Size**
+   - Very large files may cause import issues
+   - Try importing a smaller project first to test functionality
+
+3. **Validate JSON Structure**
+   - Use an online JSON validator to check file integrity
+   - Ensure file was exported from Gantt Maker
+
+<Warning>
+  Only import JSON files from trusted sources. Modified or corrupted files may cause unexpected behavior.
+</Warning>
+
+## Mobile and Responsive Issues
+
+### Touch Controls Not Working
+
+**Problem**: Drag-and-drop or touch interactions don't work on tablet/mobile.
+
+**Solutions**:
+
+1. Ensure you're touching directly on the interactive element
+2. Try a longer press before dragging
+3. Disable "zoom on double tap" in mobile browser settings
+4. Use landscape orientation for better control on small screens
+5. Update your mobile browser to the latest version
+
+### Mobile Layout Issues
+
+**Problem**: Layout appears cramped or elements overlap on mobile.
+
+**Solutions**:
+
+1. Rotate device to landscape mode
+2. Use pinch-to-zoom for detailed views
+3. Focus on specific tasks rather than full timeline view
+4. Consider using desktop/tablet for complex editing tasks
+
+<Tip>
+  While Gantt Maker is fully responsive, complex project editing is best performed on desktop or tablet devices for optimal experience.
+</Tip>
+
+## Getting Additional Help
+
+If you're still experiencing issues:
+
+1. Check the browser console (F12) for error messages
+2. Note the exact steps that reproduce the problem
+3. Try the same steps in a different browser
+4. Export your project before attempting major troubleshooting
+5. Visit the [GitHub repository](https://github.com/Pacheco55/Gantt-Maker) for updates and known issues
+
+<Tip>
+  When reporting issues, include your browser version, operating system, and specific steps to reproduce the problem.
+</Tip>

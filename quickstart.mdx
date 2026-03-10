@@ -1,80 +1,238 @@
 ---
-title: "Quickstart"
-description: "Start building awesome documentation in minutes"
+title: Quickstart Guide
+description: Create your first Gantt chart in 30 seconds with this step-by-step guide
 ---
 
-## Get started in three steps
+# Quickstart Guide
 
-Get your documentation site running locally and make your first customization.
+Get started with Gantt Maker in just 30 seconds. This guide will walk you through downloading the application, creating your first project, and building your first interactive Gantt chart.
 
-### Step 1: Set up your local environment
+## Prerequisites
 
-<AccordionGroup>
-  <Accordion icon="copy" title="Clone your docs locally">
-    During the onboarding process, you created a GitHub repository with your docs content if you didn't already have one. You can find a link to this repository in your [dashboard](https://dashboard.mintlify.com).
+<Check>
+  - Windows operating system
+  - Modern web browser (Chrome, Firefox, Edge, or Safari)
+  - No internet connection required after download
+</Check>
+
+## Step 1: Download and Launch
+
+<Steps>
+  <Step title="Download the executable">
+    Download the latest version of Gantt Maker from the official GitHub repository:
     
-    To clone the repository locally so that you can make and preview changes to your docs, follow the [Cloning a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) guide in the GitHub docs.
-  </Accordion>
-  <Accordion icon="rectangle-terminal" title="Start the preview server">
-    1. Install the Mintlify CLI: `npm i -g mint`
-    2. Navigate to your docs directory and run: `mint dev`
-    3. Open `http://localhost:3000` to see your docs live!
+    <Card
+      title="Download Gantt Maker"
+      icon="download"
+      href="https://github.com/Pacheco55/Gantt-Maker/raw/refs/heads/main/GANNTpixelbits.exe"
+    >
+      Click to download GANNTpixelbits.exe
+    </Card>
     
-    <Tip>Your preview updates automatically as you edit files.</Tip>
-  </Accordion>
-</AccordionGroup>
-
-### Step 2: Deploy your changes
-
-<AccordionGroup>
-  <Accordion icon="github" title="Install our GitHub app">
-    Install the Mintlify GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app).
+    <Note>
+    Your browser may warn you about downloading .exe files. This is normal - the file is safe and open source.
+    </Note>
+  </Step>
+  
+  <Step title="Launch the application">
+    Once downloaded, double-click `GANNTpixelbits.exe` to launch Gantt Maker.
     
-    Our GitHub app automatically deploys your changes to your docs site, so you don't need to manage deployments yourself.
-</Accordion>
-<Accordion icon="palette" title="Update your site name and colors">
-    For a first change, let's update the name and colors of your docs site.
+    The application will open in your default web browser with a clean, ready-to-use interface.
+    
+    <Tip>
+    No installation required - the executable launches directly and opens the HTML5 interface in your browser.
+    </Tip>
+  </Step>
+</Steps>
 
-    1. Open `docs.json` in your editor.
-    2. Change the `"name"` field to your project name.
-    3. Update the `"colors"` to match your brand.
-    4. Save and see your changes instantly at `http://localhost:3000`.
+## Step 2: Configure Your Timeline
 
-    <Tip>Try changing the primary color to see an immediate difference!</Tip>
-  </Accordion>
-</AccordionGroup>
+<Steps>
+  <Step title="Choose your timeline mode">
+    Gantt Maker offers two timeline modes to match your project needs:
+    
+    <Tabs>
+      <Tab title="Date Mode">
+        **Date Mode** - Plan by days and weeks
+        
+        Perfect for:
+        - Traditional project management
+        - Long-term projects (weeks to months)
+        - Milestone-based planning
+        
+        Click the **Date Mode** button to activate this view.
+      </Tab>
+      <Tab title="Hour Mode">
+        **Hour Mode** - Track with hour-level precision
+        
+        Perfect for:
+        - Sprint planning (2-week development cycles)
+        - Intensive short-term projects
+        - Hour-by-hour task scheduling
+        - Event planning
+        
+        Click the **Hour Mode** button to activate this view.
+      </Tab>
+    </Tabs>
+    
+    <Note>
+    You can switch between modes at any time with a single click - your data is preserved.
+    </Note>
+  </Step>
+  
+  <Step title="Set your project dates">
+    Define the start and end dates for your project timeline. The interface will generate the appropriate time scale based on your selected mode.
+  </Step>
+</Steps>
 
-### Step 3: Go live
+## Step 3: Add Your Team
 
-<Accordion icon="rocket" title="Publish your docs">
-  1. Commit and push your changes.
-  2. Your docs will update and be live in moments!
-</Accordion>
+<Steps>
+  <Step title="Add your first team member">
+    Click the **Add Team Member** button to create your first team entry.
+    
+    Enter the following information:
+    - **Name**: Team member's name
+    - **Role/Specialty**: Their role or area of expertise (e.g., "Frontend Developer", "Designer", "Project Manager")
+  </Step>
+  
+  <Step title="Assign a unique color">
+    Each team member is automatically assigned a unique color for visual identification.
+    
+    <Tip>
+    Colors make it easy to see at a glance who is working on what and identify potential over-assignments.
+    </Tip>
+    
+    You can customize the color by clicking the color picker next to the team member's name.
+  </Step>
+  
+  <Step title="Add more team members (optional)">
+    Repeat the process to add additional team members. Each will get their own unique color for visual distinction.
+  </Step>
+</Steps>
 
-## Next steps
+## Step 4: Create Your First Task
 
-Now that you have your docs running, explore these key features:
+<Steps>
+  <Step title="Add a new task">
+    Click the **Add Task** button to create your first task.
+    
+    Fill in the task details:
+    - **Task name**: Brief, descriptive name
+    - **Description**: Additional details (optional)
+    - **Start time**: When the task begins
+    - **End time**: When the task should complete
+  </Step>
+  
+  <Step title="Assign the task to a team member">
+    Assign the task to one of your team members by:
+    - Selecting from the dropdown menu, or
+    - Using drag-and-drop to move the task to a team member's row
+    
+    The task will automatically display in that team member's unique color.
+  </Step>
+</Steps>
+
+## Step 5: Track Progress
+
+<Steps>
+  <Step title="Mark task as In Progress">
+    When work begins on a task, click on it to mark it as **WIP (Work In Progress)**.
+    
+    The task will update visually to show its current status.
+  </Step>
+  
+  <Step title="Mark task as completed">
+    When the task is finished, click it again to mark it as **Completed**.
+    
+    Completed tasks are visually distinguished so you can track your project's progress at a glance.
+    
+    <Check>
+    All status changes happen with a single click - no forms or confirmation dialogs.
+    </Check>
+  </Step>
+</Steps>
+
+## Step 6: Save Your Project
+
+<Steps>
+  <Step title="Automatic saving">
+    Gantt Maker automatically saves your work to your browser's LocalStorage as you make changes.
+    
+    <Note>
+    Your data is stored locally on your device - no cloud uploads, complete privacy.
+    </Note>
+  </Step>
+  
+  <Step title="Export your project (optional)">
+    To create a backup or share your project:
+    
+    1. Click the **Export** button
+    2. Save the JSON file to your preferred location
+    3. Import it later or share it with team members
+    
+    <Tip>
+    Export multiple versions of your project to explore different scheduling scenarios.
+    </Tip>
+  </Step>
+</Steps>
+
+## Next Steps
+
+Congratulations! You've created your first Gantt chart. Here's what to explore next:
 
 <CardGroup cols={2}>
-
-<Card title="Write Content" icon="pen-to-square" href="/essentials/markdown">
-  Learn MDX syntax and start writing your documentation.
-</Card>
-
-<Card title="Customize style" icon="palette" href="/essentials/settings">
-  Make your docs match your brand perfectly.
-</Card>
-
-<Card title="Add code examples" icon="square-code" href="/essentials/code">
-  Include syntax-highlighted code blocks.
-</Card>
-
-<Card title="API documentation" icon="code" href="/api-reference/introduction">
-  Auto-generate API docs from OpenAPI specs.
-</Card>
-
+  <Card title="Advanced Configuration" icon="gear" href="/installation#advanced-features">
+    Learn about weekend exclusions, custom time blocks, and business rules
+  </Card>
+  <Card title="Team Collaboration" icon="users">
+    Discover how to manage multiple team members and detect assignment conflicts
+  </Card>
+  <Card title="Visual Customization" icon="palette">
+    Customize color palettes to match your brand
+  </Card>
+  <Card title="Export & Backup" icon="download">
+    Master project export and backup strategies
+  </Card>
 </CardGroup>
 
-<Note>
-  **Need help?** See our [full documentation](https://mintlify.com/docs) or join our [community](https://mintlify.com/community).
-</Note>
+## Real-World Example
+
+<Accordion title="Example: 2-Week Development Sprint">
+  Here's how a development team might use Gantt Maker for sprint planning:
+  
+  1. **Timeline**: Hour Mode, 2-week span
+  2. **Team Members**:
+     - Sarah (Frontend Developer) - Blue
+     - Mike (Backend Developer) - Green
+     - Lisa (Designer) - Purple
+  3. **Tasks**:
+     - "Design mockups" - Lisa (Days 1-3)
+     - "API endpoints" - Mike (Days 2-6)
+     - "UI components" - Sarah (Days 4-8)
+     - "Integration" - Sarah + Mike (Days 9-10)
+  4. **Progress**: Click tasks to mark WIP/Completed as sprint progresses
+  5. **Visualization**: Color-coded bars show workload distribution and dependencies
+</Accordion>
+
+## Tips for Success
+
+<Tip>
+**Switch modes freely**: If your project needs both high-level and detailed views, switch between Date and Hour modes as needed.
+</Tip>
+
+<Tip>
+**Use color strategically**: Assign colors that match your team's roles (e.g., blue for developers, purple for designers) for faster visual parsing.
+</Tip>
+
+<Tip>
+**Export regularly**: Create snapshots of your project at key milestones to maintain version history.
+</Tip>
+
+<Warning>
+Gantt Maker stores data in your browser's LocalStorage. Clearing browser data will delete your projects unless you've exported them.
+</Warning>
+
+## Need Help?
+
+For more detailed information about installation, troubleshooting, and advanced features, check out the [Installation guide](/installation).

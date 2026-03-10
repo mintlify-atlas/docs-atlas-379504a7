@@ -1,0 +1,113 @@
+{
+  "projectType": "saas",
+  "projectName": "Gantt Maker",
+  "projectDescription": "Visual interactive Gantt chart tool for project management with dual timeline modes and team collaboration features",
+  "theme": "almond",
+  "primaryColor": "#94cb04",
+  "lightColor": "#545454",
+  "darkColor": null,
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "installation"
+            ]
+          },
+          {
+            "group": "Features",
+            "pages": [
+              "features/timeline-modes",
+              "features/team-management",
+              "features/task-tracking",
+              "features/smart-configuration"
+            ]
+          },
+          {
+            "group": "Use Cases",
+            "pages": [
+              "use-cases/development-teams",
+              "use-cases/marketing-agencies",
+              "use-cases/freelancers",
+              "use-cases/education"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "User Guide",
+        "groups": [
+          {
+            "group": "Interface",
+            "pages": [
+              "guide/interface-overview",
+              "guide/responsive-design"
+            ]
+          },
+          {
+            "group": "Working with Timelines",
+            "pages": [
+              "guide/date-mode",
+              "guide/hour-mode",
+              "guide/switching-modes"
+            ]
+          },
+          {
+            "group": "Team & Tasks",
+            "pages": [
+              "guide/adding-team-members",
+              "guide/assigning-tasks",
+              "guide/tracking-progress"
+            ]
+          },
+          {
+            "group": "Configuration",
+            "pages": [
+              "guide/excluding-dates",
+              "guide/time-blocks",
+              "guide/customization"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Resources",
+        "groups": [
+          {
+            "group": "Support",
+            "pages": [
+              "resources/faq",
+              "resources/troubleshooting",
+              "resources/data-privacy"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Dual timeline modes (date-based and hour-based)",
+    "Visual team management with color coding",
+    "Interactive drag-and-drop task assignment",
+    "Real-time progress tracking",
+    "Smart date and time exclusion",
+    "Responsive design for all devices",
+    "Offline-first with local storage",
+    "Zero backend requirements"
+  ],
+  "publicApiSurface": [
+    "Timeline configuration (date/hour modes)",
+    "Team member management",
+    "Task creation and assignment",
+    "Progress status updates (Pending/WIP/Completed)",
+    "Date and time exclusion rules",
+    "Color customization per team member",
+    "Local storage auto-save",
+    "Export and import functionality"
+  ]
+}
